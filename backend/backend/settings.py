@@ -29,7 +29,9 @@ SECRET_KEY = 'django-insecure-qhipnj9w2%osqwou72s^x%85!_jnd%6^2n4s%&#4gb+n!8kzs)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['techsellence-aura.onrender.com']
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 
 # Application definition

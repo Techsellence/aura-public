@@ -1,0 +1,17 @@
+.home-container {
+    text-align: center;
+    padding: 50px;
+}
+
+.fetch-data-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.fetch-data-button:hover {
+    background-color: #0056b3;
+}

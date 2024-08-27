@@ -2,8 +2,5 @@ services:
   - name: techsellence-aura
     type: web
     env: python
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn backend.wsgi"
-    postdeploy:
-      - python manage.py makemigrations
-      - python manage.py migrate
+    buildCommand: "cd backend && pip install -r requirements.txt"
+    startCommand: "cd backend && python manage.py migrate && gunicorn backend.wsgi"

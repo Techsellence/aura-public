@@ -61,13 +61,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-# Allow only specific origins
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-]
-
 # Alternatively, to allow all origins (be cautious with this in production)
-# CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = True
 
 # Allow all HTTP methods (GET, POST, PUT, DELETE, etc.)
 CORS_ALLOW_METHODS = [

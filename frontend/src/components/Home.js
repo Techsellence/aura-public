@@ -9,9 +9,11 @@ function Home() {
             const low = 0;
             const high = 90000000;
 
+            const apiHost = process.env.REACT_APP_API_HOST;
+            console.log('Backend API Host: ' + apiHost);
             // Make the API call to Django backend
             const response = await axios.post(
-                'http://localhost:8000/stockapi/fetch-screener-query-data/', { low, high });
+                apiHost + '/stockapi/fetch-screener-query-data/', { low, high });
 
             if (response.status === 200) {
                 console.log("Data retrieved and saved successfully", response.data);

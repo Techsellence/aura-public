@@ -13,7 +13,8 @@ function Upload({ onUpload }) {
         const formData = new FormData();
         formData.append('file', file);
         try {
-            const response = await axios.post('http://localhost:8000/stockapi/upload/', formData, {
+            const apiHost = process.env.REACT_APP_API_HOST;
+            const response = await axios.post(apiHost + '/stockapi/upload/', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },

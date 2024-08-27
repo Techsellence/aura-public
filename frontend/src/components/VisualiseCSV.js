@@ -17,8 +17,8 @@ function VisualiseCSV() {
         if (selectedFile) {
             const formData = new FormData();
             formData.append('file', selectedFile);
-
-            fetch('http://localhost:8000/stockapi/upload/', {
+            const apiHost = process.env.REACT_APP_API_HOST;
+            fetch(apiHost + '/stockapi/upload/', {
                 method: 'POST',
                 body: formData,
             })
@@ -32,7 +32,8 @@ function VisualiseCSV() {
     };
 
     const handleSearch = () => {
-        fetch(`http://localhost:8000/stockapi/search/?keyword=${keyword}`)
+        const apiHost = process.env.REACT_APP_API_HOST;
+        fetch(apiHost + `/stockapi/search/?keyword=${keyword}`)
             .then(response => response.json())
             .then(data => {
                 setData(data.data);

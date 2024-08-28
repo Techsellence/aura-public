@@ -15,3 +15,25 @@
 .fetch-data-button:hover {
     background-color: #0056b3;
 }
+
+.loading-indicator {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #007bff;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.completed-message {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #28a745;
+}
